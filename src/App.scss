@@ -1,0 +1,201 @@
+#root
+{
+  .wrapper
+  {
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    .innerWrapper
+    {
+      max-width: 700px;
+      margin: auto;
+      height: 378px;
+      border: 1px solid #0000ff;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      .title
+      {
+        padding: 5px 0px;
+        text-align: center;
+        background: wheat;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 1px solid #0000ff;
+      }
+      .bodyContainer ,.innerCont
+      {
+        width: 100%;
+        float: left;
+        .innerCont
+        {
+          border-bottom: 1px solid #0000ff;
+        }
+        .pizzaCont
+        {
+          width: 70%;
+          float: right;
+          .pizzaParent
+          {
+            height: 50px;
+            margin: 5px 0px;
+            width: 70%;
+            float: left;
+            .pizza
+            {
+              background-repeat: no-repeat;
+              padding-left: 100px;
+              height: 100%;
+              text-transform: capitalize;
+              position: relative;
+              width: 50%;
+              float: left;
+              padding-top: 17px;
+              box-sizing: border-box;
+            }
+            #small::before , #medium::before , #large::before
+            {
+              content : "";
+              background-image: url(./img/large.png) ;
+              position: absolute;
+              left:0px;
+              
+            }  
+            #small::before
+            {
+              height:30px;
+              width:30px;
+              background-size: 30px;
+              top:9px;
+            }
+            #medium::before
+            {
+              height: 40px;
+              width: 40px;
+              background-size: 40px; 
+              top:4px;
+            }
+            #large::before{
+              width:50px;
+              height:50px;
+              background-size: 50px;
+              top:-2px;
+            }
+          }
+        }
+        .membersCont
+        {
+          float: left;
+          width:70%;
+            .memberWholeCont
+            {
+              margin: 10px 0px;
+              float: left;
+              height: 50px;
+              width: 100%;
+              .member
+              {
+                background-repeat: no-repeat;
+                padding-left: 100px;
+                height: 100%;
+                text-transform: capitalize;
+                position: relative;
+                width: 50%;
+                float: left;
+                padding-top: 16px;
+              }
+            }
+            #adult::before
+            {
+              content : url(./img/adult.png);
+              position: absolute;
+              left:0;
+              top:0px;
+            }
+            #children::before{
+              content : url(./img/children.png);
+              position: absolute;
+              left:0;
+              top:0px
+            }
+          
+        }
+      }
+      .footer
+      {
+        width: 100%;
+        float: left;
+        .footerInnerCont
+        {
+          padding: 5px 0px;
+          text-align: center;
+          background: wheat;
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
+          float: left;
+          width:100%;
+          .orderLabel
+          {
+            float: left;
+            width: 80%
+          }
+          .orderTotal
+          {
+            float: left;
+            width: 12%;
+            margin-right: 8%;
+          }
+        }
+      }
+    }
+  }
+}
+.icon
+{
+  width: 50px;
+  text-align: center;
+  float: left;
+}
+.pizzaIconWrapper
+{
+  padding-top: 22px;
+  float: left;
+}
+.memberIconWrapper
+{
+  float: left;
+  padding-top:21px;
+}
+.inputCont
+{
+  float: left;
+}
+.membersCont::before
+{
+  position: absolute;
+  content: "";
+  width:100%;
+  border-top:2px solid #0000ff;
+  left: 0;
+}
+.enabled 
+{
+  .innerPath
+  {
+    fill : #4caf50;
+  }
+  
+}
+.disabled 
+{
+  cursor: no-drop;
+  pointer-events: none;
+  .innerPath
+  {
+    fill : #909090;
+  }
+}
